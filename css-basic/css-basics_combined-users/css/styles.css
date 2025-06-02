@@ -56,7 +56,6 @@ li {
   font-size: 12px;
   color: darkslategray;
   margin: 6px 0;
-  display: none;
 }
 
 .location {
@@ -64,6 +63,15 @@ li {
   font-weight: 600;
   text-align: end;
   margin: 0;
+}
+
+ul .user .location {
+  text-align: left;
+  color: darkslategrey;
+}
+
+ul .user .bio {
+  display: none;
 }
 
 /*
