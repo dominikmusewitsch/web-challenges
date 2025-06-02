@@ -26,6 +26,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .header__subheading {
@@ -46,8 +48,10 @@ body {
   height: 48px;
   color: #ffffff;
   background: #370182;
-  position: static;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /**
