@@ -89,6 +89,10 @@ section {
   display: inline;
 }
 
+.favourites .subtitle {
+  border-color: orange;
+}
+
 /* ------- List ------- */
 
 /* Task 7: Finally, let's style our list with of favorite Pokémon. Which selector do we need? Also, add values for padding. */
