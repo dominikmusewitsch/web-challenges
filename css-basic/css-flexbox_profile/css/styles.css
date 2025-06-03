@@ -47,3 +47,9 @@ h2 {
 .profile__image {
   align-self: center;
 }
+
+ul {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
