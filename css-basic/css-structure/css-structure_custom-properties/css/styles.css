@@ -1,3 +1,11 @@
+:root {
+  --color-granite: #252629;
+  --color-nemo: #ff4a11ff;
+  --color-foam: #fff;
+  --margin: 0px;
+  --border-radius-small: 4px;
+}
+
 *,
 *::before,
 *::after {
@@ -5,21 +13,20 @@
 }
 
 body {
-  margin: 0;
+  margin: var(--margin);
   font-family: system-ui;
   line-height: 1.2;
 }
 
 header {
   background: rgb(131 54 255/ 45%);
-  
 }
 
 h1 {
   text-align: center;
-  color: white;
+  color: var(--color-foam);
   line-height: 1.4;
-  margin: 0;
+  margin: var(--margin);
   letter-spacing: 0.025em;
   text-transform: uppercase;
   padding-block: 16px;
@@ -30,7 +37,7 @@ h2 {
 }
 
 strong {
-  color: #ff4a11;
+  color: var(--color-nemo);
 }
 
 section {
@@ -39,7 +46,7 @@ section {
   gap: 32px;
   padding: 16px;
   width: min(1000px, 100%);
-  margin: 0 auto;
+  margin: var(--margin);
 }
 
 article {
@@ -56,14 +63,14 @@ figure {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 0;
+  margin: var(--margin);
   padding: 10px;
-  background-color: #ff4a11ff;
-  border-radius: 4px;
+  background-color: var(--color-nemo);
+  border-radius: var(--border-radius-small);
 }
 
 figcaption {
-  color: rgb(255 255 255);
+  color: var(--color-foam);
 }
 
 nav {
@@ -76,9 +83,9 @@ a {
   display: inline-block;
   font-size: smaller;
   padding: 8px;
-  border-radius: 4px;
-  background-color: hsl(14 100% 53%);
-  color: #fff;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
 }
 
 a:hover,
@@ -88,13 +95,13 @@ a:focus-visible {
 }
 
 mark {
-  background-color: rgb(255 74 17);
-  color: #ffffff;
-  border-radius: 4px;
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
+  border-radius: var(--border-radius-small);
   letter-spacing: 0.025em;
 }
 
 ::selection {
-  background-color: #252629;
-  color: #ff4a11;
+  background-color: var(--color-granite);
+  color: var(--color-nemo);
 }
