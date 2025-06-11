@@ -20,3 +20,5 @@ const monthlyContribution = 100;
 const month = 12;
 
 const totalSavings = startingBalance + monthlyContribution * month;
+
+console.log(totalSavings);
