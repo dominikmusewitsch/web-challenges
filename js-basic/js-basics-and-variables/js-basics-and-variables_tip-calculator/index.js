@@ -15,9 +15,9 @@ based on the cost of the meal and the percentage of the tip.
 4. Log a message to the console that includes the meal cost, tip amount, and total cost.
 */
 
-let mealCost = 15€;
-let tip = 10%;
+const mealCost = 15;
+const tipPercentage = 0.1;
 
-let tipAmount = 1,50€;
+const tipAmount = mealCost * tipPercentage;
 
-let totalCost = 16,50€;
+const totalCost = mealCost + tipAmount;
