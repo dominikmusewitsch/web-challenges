@@ -23,3 +23,4 @@ console.log("Your current age is: " + currentAge);
 
 const daysOfLive = currentAge * 365;
 const remainingDays = (80 - currentAge) * 365;
+const percentageLived = (currentAge / 80) * 100;
