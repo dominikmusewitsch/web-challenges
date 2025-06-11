@@ -21,3 +21,7 @@ const tipPercentage = 0.1;
 const tipAmount = mealCost * tipPercentage;
 
 const totalCost = mealCost + tipAmount;
+
+console.log(mealCost);
+console.log(tipAmount);
+console.log(totalCost);
