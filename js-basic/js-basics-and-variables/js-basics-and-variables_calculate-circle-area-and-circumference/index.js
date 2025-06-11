@@ -17,3 +17,5 @@ How can you calculate the area and circumference of a pizza - oops, I mean a cir
 const radius = 5;
 
 const circleArea = Math.PI * radius ** 2;
+
+const circumference = 2 * Math.PI * radius;
