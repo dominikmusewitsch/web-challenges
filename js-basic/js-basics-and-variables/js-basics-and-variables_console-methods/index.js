@@ -6,7 +6,11 @@ console.clear();
 
 // 1. Store the sentence 'Happy coding!' in a variable named 'coding'.
 
+let coding = "Happy coding!";
+
 // 2. Display the variable 'coding' as a message in the console.
+
+console.log(coding);
 
 // 3. Store the sentence 'Happy hacking!' in a variable named 'hacking'.
 
