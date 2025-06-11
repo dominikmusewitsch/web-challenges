@@ -30,6 +30,36 @@ For each operation (add, subtract, multiply, divide, exponent, and modulo):
 
 // --v-- write your code here --v--
 
+add.addEventListener("click", () => {
+  const resultAdd = operand1 + operand2;
+  console.log(resultAdd);
+});
+
+substract.addEventListener("click", () => {
+  const resultSubstract = operand1 - operand2;
+  console.log(resultSubstract);
+});
+
+multiply.addEventListener("click", () => {
+  const resultMultiply = operand1 * operand2;
+  console.log(resultMultiply);
+});
+
+divide.addEventListener("click", () => {
+  const resultDivide = operand1 / operand2;
+  console.log(resultDivide);
+});
+
+exponent.addEventListener("click", () => {
+  const resultExponent = operand1 ** operand2;
+  console.log(resultExponent);
+});
+
+modulo.addEventListener("click", () => {
+  const resultModulo = operand1 % operand2;
+  console.log(resultModulo);
+});
+
 // --^-- write your code here --^--
 
 // ----- Update the First Operand -----
