@@ -11,6 +11,12 @@ console.clear();
 
 // --v-- write your code here --v--
 
+const title = "Title for the post";
+const text = "Content for the post";
+let likes = 0;
+const user = "User who created the post";
+const isReported = true;
+
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +24,15 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+
+console.log(title);
+console.log(text);
+
+// console.log(likes); -----das spuckt 0 aus-----
+likes += 1;
+console.log("Update likes:", likes);
+
+console.log(user);
+console.log(isReported);
 
 // --^-- write your code here --^--
