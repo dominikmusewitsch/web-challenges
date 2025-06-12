@@ -76,4 +76,11 @@ Step 2: Add event listeners to update `operand1` based on the button clicked. Lo
 
 // --v-- write your code here --v--
 
+const increaseByOne = document.querySelector(`[data-js="increase-by-one"]`);
+
+increaseByOne.addEventListener("click", () => {
+  const resultIncreaseByOne = operand1 + 1;
+  console.log(resultIncreaseByOne);
+});
+
 // --^-- write your code here --^--
