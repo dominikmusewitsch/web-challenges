@@ -1,6 +1,6 @@
 console.clear();
 
-const operand1 = 12;
+let operand1 = 12;
 const operand2 = 4;
 
 // ----- Mathematical Operations -----
@@ -35,7 +35,7 @@ add.addEventListener("click", () => {
   console.log(resultAdd);
 });
 
-substract.addEventListener("click", () => {
+subtract.addEventListener("click", () => {
   const resultSubtract = operand1 - operand2;
   console.log(resultSubtract);
 });
@@ -79,43 +79,46 @@ Step 2: Add event listeners to update `operand1` based on the button clicked. Lo
 const increaseByOne = document.querySelector(`[data-js="increase-by-one"]`);
 
 increaseByOne.addEventListener("click", () => {
-  const resultIncreaseByOne = operand1 + 1;
+  const resultIncreaseByOne = (operand1 += 1);
   console.log(resultIncreaseByOne);
+
+  // ist wohl redundant, besser wäre: operand1 += 1;
+  //                                  console.log(operand1);
 });
 
 const increaseByFive = document.querySelector(`[data-js="increase-by-five"]`);
 
 increaseByFive.addEventListener("click", () => {
-  const resultIncreaseByFive = operand1 + 5;
+  const resultIncreaseByFive = (operand1 += 5);
   console.log(resultIncreaseByFive);
 });
 
 const decreaseByOne = document.querySelector(`[data-js="decrease-by-one"]`);
 
 decreaseByOne.addEventListener("click", () => {
-  const resultDecreaseByOne = operand1 - 1;
+  const resultDecreaseByOne = (operand1 -= 1);
   console.log(resultDecreaseByOne);
 });
 
 const decreaseByFive = document.querySelector(`[data-js="decrease-by-five"]`);
 
 decreaseByFive.addEventListener("click", () => {
-  const resultDecreaseByFive = operand1 - 5;
+  const resultDecreaseByFive = (operand1 -= 5);
   console.log(resultDecreaseByFive);
 });
 
 const multiplyByTwo = document.querySelector(`[data-js="multiply-by-two"]`);
 
 multiplyByTwo.addEventListener("click", () => {
-  const resultMultiplyByTwo = operand1 * 2;
+  const resultMultiplyByTwo = (operand1 *= 2);
   console.log(resultMultiplyByTwo);
 });
 
 const divideByTwo = document.querySelector(`[data-js="divide-by-two"]`);
 
 divideByTwo.addEventListener("click", () => {
-  const resultDevideByTwo = operand1 / 2;
-  console.log(resultDevideByTwo);
+  const resultDivideByTwo = (operand1 /= 2);
+  console.log(resultDivideByTwo);
 });
 
 // --^-- write your code here --^--
