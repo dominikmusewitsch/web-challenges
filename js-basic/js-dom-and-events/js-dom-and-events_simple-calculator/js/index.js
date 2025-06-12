@@ -111,4 +111,11 @@ multiplyByTwo.addEventListener("click", () => {
   console.log(resultMultiplyByTwo);
 });
 
+const divideByTwo = document.querySelector(`[data-js="divide-by-two"]`);
+
+divideByTwo.addEventListener("click", () => {
+  const resultDevideByTwo = operand1 / 2;
+  console.log(resultDevideByTwo);
+});
+
 // --^-- write your code here --^--
