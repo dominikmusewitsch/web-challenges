@@ -90,4 +90,11 @@ increaseByFive.addEventListener("click", () => {
   console.log(resultIncreaseByFive);
 });
 
+const decreaseByOne = document.querySelector(`[data-js="decrease-by-one"]`);
+
+decreaseByOne.addEventListener("click", () => {
+  const resultDecreaseByOne = operand1 - 1;
+  console.log(resultDecreaseByOne);
+});
+
 // --^-- write your code here --^--
