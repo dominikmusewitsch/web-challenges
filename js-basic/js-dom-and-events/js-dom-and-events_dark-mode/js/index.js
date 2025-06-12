@@ -17,3 +17,11 @@ const btnLightMode = document.querySelector(`[data-js="light-mode-button"]`);
 btnLightMode.addEventListener("click", () => {
   bodyElement.classList.remove("dark");
 });
+
+// btn für toggle
+
+const btnToggle = document.querySelector(`[data-js="toggle-button"]`);
+
+btnToggle.addEventListener("click", () => {
+  bodyElement.classList.toggle("dark");
+});
