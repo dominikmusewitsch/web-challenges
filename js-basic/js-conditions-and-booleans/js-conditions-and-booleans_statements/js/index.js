@@ -16,6 +16,12 @@ switch (receivedPassword) {
 // Part 2: Even / Odd
 const number = 6;
 
+if (number % 2 === 0) {
+  console.log("Even");
+} else {
+  console.log("Odd");
+}
+
 // Part 3: Hotdogs
 const numberOfHotdogs = 42;
 
