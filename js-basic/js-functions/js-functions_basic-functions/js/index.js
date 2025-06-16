@@ -10,6 +10,11 @@ console.clear();
 
 // --v-- write your code here --v--
 
+const bookTitle = "Harry Potter";
+const bookAuthor = "J.K.Rowling";
+const bookRating = 5;
+const bookSellingNumber = 6000000;
+
 // --^-- write your code here --^--
 
 /*
@@ -27,6 +32,15 @@ Then:
 */
 
 // --v-- write your code here --v--
+
+console.log(bookTitle);
+console.log(bookAuthor);
+
+const newBookRating = bookRating - 0.5;
+console.log(newBookRating);
+
+const increaseBookSellingNumber = bookSellingNumber + 1;
+console.log(increaseBookSellingNumber);
 
 // --^-- write your code here --^--
 
