@@ -10,10 +10,10 @@ console.clear();
 
 // --v-- write your code here --v--
 
-const bookTitle = "Harry Potter";
-const bookAuthor = "J.K.Rowling";
-const bookRating = 5;
-const bookSellingNumber = 6000000;
+let bookTitle = "Harry Potter";
+let bookAuthor = "J.K.Rowling";
+let bookRating = 5;
+let bookSellingNumber = 6000000;
 
 // --^-- write your code here --^--
 
@@ -54,5 +54,23 @@ console.log(increaseBookSellingNumber);
 */
 
 // --v-- write your code here --v--
+
+function logBookData() {
+  console.log("Title:", bookTitle);
+  console.log("Author:", bookAuthor);
+  console.log("Rating:", bookRating);
+  console.log("Sales:", bookSellingNumber);
+}
+
+logBookData();
+
+bookRating = 4.5;
+bookSellingNumber += 1;
+
+logBookData();
+
+bookSellingNumber += 1;
+
+logBookData();
 
 // --^-- write your code here --^--
