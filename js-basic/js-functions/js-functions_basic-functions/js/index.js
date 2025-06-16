@@ -33,6 +33,15 @@ Then:
 
 // --v-- write your code here --v--
 
+console.log(bookTitle);
+console.log(bookAuthor);
+
+const newBookRating = bookRating - 0.5;
+console.log(newBookRating);
+
+const increaseBookSellingNumber = bookSellingNumber + 1;
+console.log(increaseBookSellingNumber);
+
 // --^-- write your code here --^--
 
 /*
