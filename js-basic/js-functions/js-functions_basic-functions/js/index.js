@@ -10,6 +10,11 @@ console.clear();
 
 // --v-- write your code here --v--
 
+const bookTitle = "Harry Potter";
+const bookAuthor = "J.K.Rowling";
+const bookRating = 5;
+const bookSellingNumber = 6000000;
+
 // --^-- write your code here --^--
 
 /*
