@@ -41,5 +41,12 @@ printCircumference(6);
 
 // Uncomment the following function calls and implement the function `printRectangleArea`.
 
-// printRectangleArea(5, 7);
-// printRectangleArea(3, 4);
+console.log("The area of the rectangle is ?");
+
+printRectangleArea(5, 7);
+printRectangleArea(3, 4);
+
+function printRectangleArea(a, b) {
+  const area = a * b;
+  console.log(`The area of the rectangle is ${area}`);
+}
