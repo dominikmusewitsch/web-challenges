@@ -23,6 +23,7 @@ switchButton.addEventListener("click", () => {
   firstInput.value = secondInput.value;
   secondInput.value = temp;
 });
+// hier diese switch funktion check ich noch nicht ganz
 
 // Switch the values of two input fields when clicking the switch button.
 
