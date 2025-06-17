@@ -8,7 +8,15 @@ form.addEventListener("submit", (event) => {
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
 
+  const age = Number(data.age);
+  const badness = Number(data.badness);
+  const ageBadnessSum = age + badness;
+
   console.log(data);
+  console.log(`The age-badness-sum of ${data.firstName} is ${ageBadnessSum}.`);
+
+  event.target.reset();
+  event.target.elements.firstName.focus();
 });
 
 // Use JavaScript to react to the form submission.
