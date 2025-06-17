@@ -1,7 +1,14 @@
 console.clear();
 
-const textInput = document.querySelector('["first-input"]');
-const buttonUppercase = document.querySelector('["button-uppercase"]');
+const textInput = document.querySelector('[data-js="first-input"]');
+const buttonUppercase = document.querySelector('[data-js="button-uppercase"]');
+
+buttonUppercase.addEventListener("click", () => {
+  const oldValue = textInput.value;
+  //   speichert den eingegeben text als string
+  const newValue = oldValue.toUpperCase();
+  textInput.value = newValue;
+});
 
 // Convert the text in the input field to uppercase when the button is clicked.
 
