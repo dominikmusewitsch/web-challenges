@@ -8,6 +8,10 @@ uppercaseButton.addEventListener("click", () => {
   input.value = input.value.toUpperCase();
 });
 
+lowercaseButton.addEventListener("click", () => {
+  input.value = input.value.toLowerCase();
+});
+
 // Convert the input value to lowercase when a second button is clicked.
 
 // [ ] Add a second button to the index.html. It should have a down arrow (↓) as text content.
