@@ -2,7 +2,13 @@ console.clear();
 
 const colorRange = document.querySelector('[data-js="input-color"]');
 const borderRadiusRange = document.querySelector('[data-js="input-radius"]');
-const rotationRadius = document.querySelector('[data-js="input-rotation"]');
+const rotationRange = document.querySelector('[data-js="input-rotation"]');
+
+colorRange.addEventListener("input", () => {});
+
+borderRadiusRange.addEventListener("input", () => {});
+
+rotationRange.addEventListener("input", () => {});
 
 // Change the appearance of the box according to the slider values (color, border radius, and rotation).
 
