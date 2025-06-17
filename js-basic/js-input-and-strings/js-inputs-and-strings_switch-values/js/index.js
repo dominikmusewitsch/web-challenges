@@ -1,13 +1,35 @@
 console.clear();
 
 const firstInput = document.querySelector('[data-js="first-input"]');
+// second input element:
+const secondInput = document.querySelector('[data-js="second-input"]');
 const uppercaseButton = document.querySelector('[data-js="button-uppercase"]');
 const lowercaseButton = document.querySelector('[data-js="button-lowercase"]');
+// switch button:
+const switchButton = document.querySelector('[data-js="button-switch"]');
 
 uppercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toUpperCase();
+  secondInput.value = secondInput.value.toUpperCase();
 });
 
 lowercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toLowerCase();
+  secondInput.value = secondInput.value.toLowerCase();
 });
+
+switchButton.addEventListener("click", () => {
+  const temp = firstInput.value;
+  firstInput.value = secondInput.value;
+  secondInput.value = temp;
+});
+
+// Switch the values of two input fields when clicking the switch button.
+
+// [x] Add a second input element to index.html.
+// [x] Assign the second input element to a variable.
+// [x] Add a third button (a switch button) to the index.html.
+// [x] Assign the switch button to a variable.
+// [ ] Ensure that when the switch button is clicked, the values of the two input fields are swapped.
+// [ ] Verify that all three buttons work correctly for both input fields.
+// Hint: Use the HTML entity ↕ for the switch button symbol.
