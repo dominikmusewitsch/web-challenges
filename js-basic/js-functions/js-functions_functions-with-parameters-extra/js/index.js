@@ -8,6 +8,7 @@ console.clear();
 
 function printSquare(number) {
   const square = number * number;
+  return square;
   console.log(square);
 }
 
@@ -43,10 +44,10 @@ printCircumference(6);
 
 console.log("The area of the rectangle is ?");
 
-printRectangleArea(5, 7);
-printRectangleArea(3, 4);
-
 function printRectangleArea(a, b) {
   const area = a * b;
   console.log(`The area of the rectangle is ${area}`);
 }
+
+printRectangleArea(5, 7);
+printRectangleArea(3, 4);

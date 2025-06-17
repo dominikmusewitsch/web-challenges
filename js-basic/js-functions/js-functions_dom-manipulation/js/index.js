@@ -60,3 +60,5 @@ function removeAllColors() {
 function addColor(colorClass) {
   box.classList.add(colorClass);
 }
+
+console.log(box.classList);

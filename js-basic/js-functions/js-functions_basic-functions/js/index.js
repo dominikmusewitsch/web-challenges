@@ -35,6 +35,8 @@ Then:
 
 console.log(bookTitle);
 console.log(bookAuthor);
+console.log(bookRating);
+console.log(bookSellingNumber);
 
 const newBookRating = bookRating - 0.5;
 console.log(newBookRating);
