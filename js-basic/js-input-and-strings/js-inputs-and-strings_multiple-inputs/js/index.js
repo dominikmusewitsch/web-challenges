@@ -6,6 +6,10 @@ const copyButton = document.querySelector("[data-js=copy-button]");
 
 // --v-- Write your code here --v--
 
+copyButton.addEventListener("click", () => {
+  secondCopyInput.value = firstCopyInput.value;
+});
+
 // --^-- End of Task 1 --^--
 
 // Task 2: Copy and Uppercase
@@ -39,3 +43,14 @@ const switchValueButton = document.querySelector(
 // --v-- Write your code here --v--
 
 // --^-- End of Task 3 --^--
+
+// Implement the following functionalities within the index.js file:
+
+// Copy
+// Copy the value of the first input field into the second input field when the copy button is clicked.
+
+// Copy and Uppercase
+// Copy the value of the first input field in uppercase into the second input field when the uppercase copy button is clicked.
+
+// Switch Values
+// Switch the values of the two input fields when the switch button is clicked.
