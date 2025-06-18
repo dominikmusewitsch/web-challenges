@@ -10,37 +10,49 @@ const price = "149,99 €";
 const imageSrc =
   "https://unsplash.com/photos/3VOTHTrE614/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU5NTM3NTA2&force=true&w=640";
 
-// 2. produkt:
-const body = document.body;
+const productTeaser = document.createElement("article");
 
-// plus vor dem = addiert den inhalt zur html anstatt den content zu überschreiben
-body.innerHTML += `
-    <article class="product">
-      <section class="product__body">
-        <div class="product__text-container">
-          <h2 class="product__name"> ${name} </h2>
-          <ul class="product__categories">
-            <li class="product__category"> ${category1} </li>
-            <li class="product__category"> ${category2} </li>
-            <li class="product__category"> ${category3} </li>
-          </ul>
-          <p class="product__description"> ${description} </p>
-        </div>
-        <div class="product__image-container">
-          <img
-            class="product__image"
-            src= ${imageSrc}
-            alt=""
-          />
-        </div>
-      </section>
-      <footer class="product__footer">
-        <span class="product__price"> ${price} </span>
-        <button type="button" class="product__buy-button">Buy</button>
-      </footer>
-    </article>
+productTeaser.classList.add("product");
+// wichtig um den selben stil zu haben (CSS klasse wird verknüpft)
+
+productTeaser.innerHTML = `
+<section class="product__body">
+<div class="product__text-container">
+  <h2 class="product__name">${name}</h2>
+  <ul class="product__categories">
+    <li class="product__category">${category1}</li>
+    <li class="product__category">${category2}</li>
+    <li class="product__category">${category3}</li>
+  </ul>
+  <p class="product__description">
+   ${description}
+  </p>
+</div>
+<div class="product__image-container">
+  <img
+    class="product__image"
+    src="${imageSrc}"
+    alt=""
+  />
+</div>
+</section>
+<footer class="product__footer">
+<span class="product__price">${price}</span>
+<button type="button" class="product__buy-button">Buy</button>
+</footer>
 `;
 
-// Add an event listener to the "buy" button of the second product teaser.
-//  When clicking the button, the product's name and
-//  price should be logged to the console.
+productTeaser.classList.add("button");
+// hier fügen wir dem inner html erstmal eine klasse "button" zu die wir nachher direkt ansteuern können
+
+const button = productTeaser.querySelector("button");
+// hier erstellen wir für den button des zweiten produkt erstmal eine variable
+
+button.addEventListener("click", () => {
+  console.log(name);
+  console.log(price);
+});
+// mit der button variable machen wir ein click event
+
+document.body.append(productTeaser);
+// ganz wichtig: produkt mit dem document body verknüpfen um es sichtbar zu machen
