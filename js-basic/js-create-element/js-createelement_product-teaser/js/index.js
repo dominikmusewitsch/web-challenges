@@ -40,3 +40,7 @@ body.innerHTML += `
       </footer>
     </article>
 `;
+
+// Add an event listener to the "buy" button of the second product teaser.
+//  When clicking the button, the product's name and
+//  price should be logged to the console.
