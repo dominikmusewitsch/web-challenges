@@ -9,6 +9,13 @@ let currentColorIndex = 0;
 
 changeColorButton.addEventListener("click", () => {
   // Add your solution below
+  colorChangeCard.style.backgroundColor = colors[currentColorIndex];
+
+  if (currentColorIndex === 4) {
+    currentColorIndex = 0;
+  } else {
+    currentColorIndex++;
+  }
 });
 
 /*  -----------------------------------------------------------
@@ -29,7 +36,12 @@ let loaderActive = false;
 
 toggleLoaderButton.addEventListener("click", () => {
   // Add your solution below
+  loaderContainer.classList.toggle("active");
 });
+
+// In JavaScript, select the button and the loader container.
+// Use an event listener on the button to toggle a CSS class (e.g., active) on the loader container.
+// Use CSS opacity and visibility properties with a transition on the loader container to control its fade-in/fade-out appearance.
 
 /*  -----------------------------------------------------------
             Challenge 4: Slide-in Div
@@ -39,4 +51,11 @@ const slideInBox = document.querySelector("[data-js=slideInBox]");
 
 slideInButton.addEventListener("click", () => {
   // Add your solution below
+  slideInBox.classList.toggle("active");
 });
+
+// In JavaScript, use an event listener on the button to toggle a
+// CSS class (e.g., active) on the sliding div.
+
+//  When the active class is present, change its transform to
+// bring it into view.
