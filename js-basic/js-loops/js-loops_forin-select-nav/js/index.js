@@ -27,7 +27,12 @@ for (const key in languages) {
   const option = document.createElement("option");
   select.append(option);
   option.textContent = languages[key];
+  option.value = key;
 }
+
+select.addEventListener("input", (event) => {
+  console.log(event.target.value);
+});
 
 // --^-- write or modify code above this line --^--
 
@@ -46,6 +51,19 @@ navElement.append(ul);
 
 // --v-- write or modify code below this line --v--
 
+for (const page in nav) {
+  const data = nav[page];
+  console.log(nav[page]);
+
+  const li = document.createElement("li");
+  const anchorTag = document.createElement("a");
+  anchorTag.href = data.href;
+  anchorTag.textContent = data.text;
+
+  li.append(anchorTag);
+  ul.append(li);
+}
+
 // --^-- write or modify code above this line --^--
 
 // Part 2: Creating a Navigation Bar
@@ -54,7 +72,8 @@ navElement.append(ul);
 // A nav object with keys ("home", "about", and "contact") is available.
 // Each key's value is an object with href and text properties.
 // nav and ul elements have already been created and appended to the main element.
-// Your task is to fill this list with list items containing anchor tags. Use the nav object in a for...in loop.
+// Your task is to fill this list with list items containing anchor tags.
+// Use the nav object in a for...in loop.
 
 // Guidelines:
 
