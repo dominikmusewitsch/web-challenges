@@ -17,11 +17,11 @@ const programmingLanguages = [
 
 // --v-- write or modify code below this line --v--
 
-const li1 = document.createElement("li");
-ol.append(li1);
-
 for (const programmingLanguage of programmingLanguages) {
   console.log(programmingLanguage);
+  const li = document.createElement("li");
+  ol.append(li);
+  li.textContent = programmingLanguage;
 }
 
 // --^-- write or modify code above this line --^--
