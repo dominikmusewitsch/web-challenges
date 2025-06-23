@@ -12,6 +12,11 @@ function renderStars(filledStars) {
     console.log(star);
     const image = document.createElement("img");
     image.setAttribute("src", "assets/star-empty.svg");
+
+    image.addEventListener("click", () => {
+      renderStars(star);
+    });
+
     starContainer.append(image);
 
     // aufgabe 2:
@@ -27,10 +32,12 @@ function renderStars(filledStars) {
 
 renderStars();
 
-// Part 2: Change the Number of Filled Stars
-// Now let's display a specific number of filled stars, depending on the argument given to the function:
+// Part 3: Implement User Input
+// Currently, the number of filled stars is set by the argument in renderStars.
+// However, we want the user to decide how many stars should be filled.
+// Let’s add user interactivity by setting up a click event on each star.
 
-// Add a parameter filledStars to the renderStars function, expecting it to be a number.
-// Inside the loop, use the value of filledStars to decide if each star should be filled or empty. 💡 Use the loop's counter variable to check which star is currently being created (first, second, third, etc.).
-// Set the src attribute of each img element to the appropiate image path, either filled or empty.
-// Update the code that calls renderStars to pass a number between 0 and 5 as an argument to check if it displays correctly.
+// Before appending each star to the starContainer, add a click event listener to it.
+// Inside the event listener, call renderStars with the correct number to display the updated star count.
+// 💡 The loop’s counter variable may help determine the correct number of filled stars.
+// All done! 🎉 Five stars to you! ⭐️⭐️⭐️⭐️⭐️
