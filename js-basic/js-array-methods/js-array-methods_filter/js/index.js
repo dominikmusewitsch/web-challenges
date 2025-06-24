@@ -28,10 +28,10 @@ const onlyCardWithIdTwo = cards.filter((card) => {
   return card.id === "2";
 });
 
-console.log(onlyCardWithIdTwo);
+// console.log(onlyCardWithIdTwo);
 
 const allCardsWith3Tags = cards.filter((card) => {
-  return card.id.length === "3";
+  return card.tags.length === 3;
 });
 
 console.log(allCardsWith3Tags);
