@@ -24,13 +24,32 @@ const cards = [
   },
 ];
 
-const onlyCardWithIdTwo = null;
+const onlyCardWithIdTwo = cards.filter((card) => {
+  return card.id === "2";
+});
 
-const allCardsWith3Tags = null;
+// console.log(onlyCardWithIdTwo);
 
-const allCardsThatAreNotBookmarked = null;
+const allCardsWith3Tags = cards.filter((card) => {
+  return card.tags.length === 3;
+});
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = null;
+// console.log(allCardsWith3Tags);
+
+const allCardsThatAreNotBookmarked = cards.filter((card) => {
+  return card.isBookmarked === false;
+});
+
+// console.log(allCardsThatAreNotBookmarked);
+
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => {
+  return (
+    card.isBookmarked === true &&
+    (card.tags.includes("js") || card.tags.includes("html"))
+  );
+});
+
+console.log(allCardsWithTagsHTMLOrJSThatAreBookmarked);
 
 export {
   onlyCardWithIdTwo,
@@ -38,3 +57,14 @@ export {
   allCardsThatAreNotBookmarked,
   allCardsWithTagsHTMLOrJSThatAreBookmarked,
 };
+
+// Tasks
+// In the ./index.js file, there is a cards array with three objects.
+
+// Below this array, you will find a couple of variables (e.g. onlyCardsWithTagHTML).
+// They are all initialized with null.
+
+// And now it's your turn: delete the value null and write code such
+// that the variables have a value corresponding to their name. Use filter to achieve this goal.
+
+// Switch to the ./index.js file and map / filtersome recipes!
