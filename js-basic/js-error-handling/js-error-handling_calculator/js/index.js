@@ -19,6 +19,16 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const firstNumber = Number(event.target.firstNumber.value);
   const secondNumber = Number(event.target.secondNumber.value);
-  const operation = event.target.operation.value;
-  output.innerText = operations[operation](firstNumber, secondNumber);
+  try {
+    const operation = event.target.operation.value;
+    output.innerText = operations[operation](firstNumber, secondNumber);
+  } catch (error) {
+    output.textContent = "Cannot be divided by 0";
+  }
 });
+
+// This is a nice little calculator, but has a little problem -
+// it doesn't handle the division by zero properly!
+
+// Handle the case with try...catch and display an appropriate message
+// in the .error element in case.
