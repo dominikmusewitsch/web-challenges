@@ -10,6 +10,15 @@ async function fetchUserData(url) {
       headers: { "x-api-key": "reqres-free-v1" },
     });
 
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
+
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new Error(`Unexpected content-type: ${contentType}`);
+    }
+
     return await response.json();
   } catch (error) {
     return { error: error.message };
@@ -44,3 +53,17 @@ endpoints.forEach((endpoint) => {
     }
   });
 });
+
+// Bonus Challenge
+
+// With the button "Invalid API Link", we do not receive
+// the right content-type as response, this is already written
+// into the <p class="error" data-js="error"></p> element like this:
+
+//  Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+// Can you be more specific and inform the user which content-type we received instead?
+
+// 💡 This is how you can get the content-type:
+
+// const response = await fetch(url);
+// const contentType = response.headers.get("content-type");
