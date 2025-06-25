@@ -46,4 +46,21 @@ async function fetchDataAndRender() {
   console.log(response);
   const data = await response.json();
   console.log(data);
+
+  // aufgabe 2:
+  const characters = data.results;
+  characters.forEach((character) => {
+    const card = Card(character);
+    renderElement(card);
+  });
+  console.log(characters);
 }
+
+// Task 2: Moooooooooore cards!
+// Use an array method to create and render a card for each object in the fetched data array.
+
+// The following hints may guide you:
+
+// What was the array method again to perform an action for each element?
+// You can use the functions Card() and renderElement() to create those cards, see the explanation above!
+// Please switch to the js/index.js file to start counting!
