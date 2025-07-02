@@ -1,10 +1,10 @@
 import "./styles.css";
 
 export default function App() {
-  return articleComponent();
+  return <Article />;
 }
 
-function articleComponent() {
+function Article() {
   return (
     <article className="article">
       <h2 className="article__title">Hier steht nur Müll</h2>
