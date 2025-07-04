@@ -1,9 +1,9 @@
 import { Image } from "./Image.jsx";
 import logo from "../img/logo.jpg";
 
-export function Logo({ href }) {
+export function Logo() {
   return (
-    <a href={href}>
+    <a href="#">
       <Image src={logo} alt="logo" />
     </a>
   );
