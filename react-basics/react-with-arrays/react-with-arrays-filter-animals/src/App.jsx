@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import { useState } from "react";
 
 const animals = [
   { id: "1", name: "Dog", habitat: "Domestic Animal", emoji: "🐕" },
@@ -30,5 +31,41 @@ const animals = [
 const habitats = ["Mountains", "Ocean", "Forest", "Domestic Animal"];
 
 export default function App() {
-  return <h1>Animal Filter</h1>;
+  const [habitat, setHabitat] = useState("");
+  const filteredAnimals = animals.filter(
+    (animal) => animal.habitat === habitat
+  );
+
+  return (
+    <div>
+      <h1>Animal Filter</h1>
+      <div>
+        {habitats.map((hab) => (
+          <button
+            key={hab}
+            className="button"
+            onClick={() => setHabitat(hab)}
+            style={{ backgroundColor: habitat === hab ? "lightblue" : "" }}
+          >
+            {hab}
+          </button>
+        ))}
+        <ul>
+          {filteredAnimals.map((animal) => (
+            <li key={animal.id} className="animal">
+              {animal.emoji} {animal.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <p>Selected Habitat: {habitat}</p>
+    </div>
+  );
 }
+
+// ## Bonus: Highlight the Selected Button
+
+// - Update the button's `className` to visually indicate when it's selected.
+// - Set the button's background color to `"lightblue"` if its habitat matches the selected habitat in state.
+
+// - Hint: You can make use of a ternary operator.
