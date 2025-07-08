@@ -10,7 +10,9 @@ export default function App() {
   }
 
   function peopleDecreament() {
-    setPeople(people - 1);
+    if (people > 0) {
+      setPeople(people - 1);
+    }
   }
 
   return (
