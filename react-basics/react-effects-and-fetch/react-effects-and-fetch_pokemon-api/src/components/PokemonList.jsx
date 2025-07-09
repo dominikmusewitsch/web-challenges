@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function PokemonList() {
   const [pokemon, setPokemon] = useState([]);
@@ -13,11 +13,12 @@ export default function PokemonList() {
     }
   }
 
+  useEffect(() => {
+    loadPokemon();
+  }, []);
+
   return (
     <main>
-      <button type="button" onClick={loadPokemon}>
-        Load Pokémon
-      </button>
       <ul>
         {pokemon.map(({ name }) => (
           <li key={name}>{name}</li>
@@ -26,3 +27,8 @@ export default function PokemonList() {
     </main>
   );
 }
+
+// - Remove the "Load Pokémon" button.
+// - Modify the code so that the `loadPokemon` function is executed automatically when the component is initially rendered.
+
+// _Hint:_ Don’t forget to include the dependency array!
