@@ -1,11 +1,11 @@
-import { useState } from "react";
 import FontSelector from "./components/FontSelector";
 import Note from "./components/Note";
 import "./styles.css";
+import useLocalStorageState from "use-local-storage-state";
 
 export default function App() {
-  const [note, setNote] = useState("");
-  const [font, setFont] = useState("system-ui");
+  const [note, setNote] = useLocalStorageState("");
+  const [font, setFont] = useLocalStorageState("system-ui");
 
   function handleNoteChange(newNote) {
     setNote(newNote);
@@ -22,3 +22,14 @@ export default function App() {
     </div>
   );
 }
+
+// ## Tasks
+
+// Switch to the `./src/App.jsx` file and replace both `useState` hooks
+// with `useLocalStorageState` hooks to make the notepad and the font selection persistent.
+// The `use-local-storage-state` package is already installed. Import it like this:
+
+// ```jsx
+// import useLocalStorageState from "use-local-storage-state";
+
+// ```
