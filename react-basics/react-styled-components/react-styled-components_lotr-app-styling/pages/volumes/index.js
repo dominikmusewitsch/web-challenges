@@ -6,20 +6,20 @@ import styled from "styled-components";
 export default function Volumes() {
   return (
     <>
-      <h1>The Lord of the Rings</h1>
-      <p>{introduction}</p>
-      <h2>All Volumes</h2>
+      <StyledTitle>The Lord of the Rings</StyledTitle>
+      <StyledIntroduction>{introduction}</StyledIntroduction>
+      <StyledVolumes>All Volumes</StyledVolumes>
       <WrappedList>
         {volumes.map((volume) => (
           <ListElement key={volume.id}>
-            <VolumeImage
-              src={volume.cover}
-              alt={`Cover image of ${volume.title}`}
-              width={140}
-              height={230}
-            />
             <TitleLink href={`/volumes/${volume.slug}`}>
-              {volume.title}
+              <VolumeImage
+                src={volume.cover}
+                alt={`Cover image of ${volume.title}`}
+                width={84}
+                height={138}
+              />
+              <p>{volume.title}</p>
             </TitleLink>
           </ListElement>
         ))}
@@ -28,18 +28,30 @@ export default function Volumes() {
   );
 }
 
+const StyledTitle = styled.h1`
+  font-size: 45px;
+`;
+
+const StyledIntroduction = styled.p`
+  margin-bottom: 60px;
+`;
+
+const StyledVolumes = styled.h2`
+  font-size: 30px;
+`;
+
 const WrappedList = styled.ul`
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 0;
 `;
 
 const ListElement = styled.li`
   display: flex;
-  gap: 20px;
+
   flex-direction: column;
-  max-width: 140px;
+  width: 84px;
   flex-wrap: wrap;
 `;
 
@@ -53,4 +65,6 @@ const VolumeImage = styled(Image)`
 
 const TitleLink = styled(Link)`
   text-decoration: none;
+  color: black;
+  font-size: 12px;
 `;

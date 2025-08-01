@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     /* font-family: system-ui; */
     font-family: ${lora.style.fontFamily}, serif;
+    padding: 30px;
   }
 
   :root {
