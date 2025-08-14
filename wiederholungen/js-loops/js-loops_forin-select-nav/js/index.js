@@ -1,3 +1,5 @@
+const { createElement } = require("react");
+
 console.clear();
 
 const main = document.querySelector('[data-js="main"]');
@@ -21,6 +23,13 @@ select.name = "languages";
 main.append(select);
 
 // --v-- write or modify code below this line --v--
+
+for (const key in languages) {
+  const option = document.createElement("option");
+  option.value = key;
+  option.textContent = languages[key];
+  select.append(option);
+}
 
 // --^-- write or modify code above this line --^--
 
